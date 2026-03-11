@@ -266,7 +266,7 @@ export default function App() {
 
                         <button onClick={goTo360} className={`px-4 py-2 rounded-full transition-all duration-300 ${currentView === '360' ? 'bg-blue-50 text-blue-600 shadow-sm' : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'}`}>upeFR 360°</button>
                         <button onClick={goToAbout} className={`px-4 py-2 rounded-full transition-all duration-300 ${currentView === 'about' ? 'bg-blue-50 text-blue-600 shadow-sm' : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'}`}>Nosotros</button>
-                        <a href="https://uniformesprofesionales.mx" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-[#0c345f] hover:text-[#0f447a] transition-colors flex items-center gap-1 border border-[#0c345f]/30 px-3 py-1.5 rounded-full hover:bg-[#0c345f]/5">
+                        <a href="https://flowmx.github.io/upeuniformes/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-[#0c345f] hover:text-[#0f447a] transition-colors flex items-center gap-1 border border-[#0c345f]/30 px-3 py-1.5 rounded-full hover:bg-[#0c345f]/5">
                             upe Uniformes <Globe className="w-3 h-3" />
                         </a>
                         <button onClick={goToContact} className={`px-5 py-2 rounded-full font-bold transition-all duration-300 ${currentView === 'contact' ? 'bg-blue-600 text-white shadow-md shadow-blue-600/20' : 'bg-gray-900 text-white hover:bg-blue-600 shadow-md shadow-gray-900/10'}`}>Contacto</button>
@@ -305,7 +305,7 @@ export default function App() {
                             <button onClick={() => { goToStore(null); setIsMobileMenuOpen(false); }} className={`text-left text-lg font-semibold py-2 ${currentView === 'store' || currentView === 'product' ? 'text-blue-600' : 'text-gray-700'}`}>Tienda</button>
                             <button onClick={() => { goTo360(); setIsMobileMenuOpen(false); }} className={`text-left text-lg font-semibold py-2 ${currentView === '360' ? 'text-blue-600' : 'text-gray-700'}`}>upeFR 360°</button>
                             <button onClick={() => { goToAbout(); setIsMobileMenuOpen(false); }} className={`text-left text-lg font-semibold py-2 ${currentView === 'about' ? 'text-blue-600' : 'text-gray-700'}`}>Sobre Nosotros</button>
-                            <a href="https://uniformesprofesionales.mx" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="text-left text-lg font-bold text-[#0c345f] py-2 flex items-center justify-between">
+                            <a href="https://flowmx.github.io/upeuniformes/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="text-left text-lg font-bold text-[#0c345f] py-2 flex items-center justify-between">
                                 upe Uniformes <Globe className="w-5 h-5 opacity-50" />
                             </a>
                             <button onClick={() => { goToContact(); setIsMobileMenuOpen(false); }} className={`text-left text-lg font-semibold py-2 ${currentView === 'contact' ? 'text-blue-600' : 'text-gray-700'}`}>Contacto</button>
