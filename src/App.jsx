@@ -1834,12 +1834,12 @@ export default function App() {
 
                             <button
                                 onClick={() => setShowModal(false)}
-                                className="absolute top-4 right-4 text-gray-400 hover:text-gray-800 hover:bg-gray-100 rounded-full p-2 transition-colors focus:outline-none z-10"
+                                className="absolute top-3 right-3 md:top-4 md:right-4 text-gray-400 hover:text-gray-800 hover:bg-gray-100 rounded-full p-1.5 md:p-2 transition-colors focus:outline-none z-10 bg-white/50 backdrop-blur-sm"
                             >
-                                <X className="w-6 h-6" />
+                                <X className="w-5 h-5 md:w-6 md:h-6" />
                             </button>
 
-                            <div className="text-center p-6 pb-2 md:p-8 md:pb-4 relative z-10">
+                            <div className="text-center p-6 pt-10 pb-2 md:p-8 md:pt-10 md:pb-4 relative z-10">
                                 <h2 className="text-2xl md:text-3xl font-extrabold text-[#0c345f] mb-1 md:mb-2">¡Bienvenido a <span className="text-blue-500">upe</span>FR!</h2>
                                 <p className="text-gray-500 text-sm md:text-lg">Por favor, selecciona el portal que deseas visitar hoy.</p>
                             </div>
