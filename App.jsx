@@ -220,7 +220,7 @@ export default function App() {
                             title="Doble clic para admin"
                         >
                             <span className="text-blue-600 transition duration-300 group-hover:text-blue-500">upe</span>
-                            <span className="text-gray-900 transition duration-300 group-hover:text-gray-700">FR</span>
+                            <span className="text-[#0c345f] transition duration-300 group-hover:text-gray-700">FR</span>
                             <motion.div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></motion.div>
                         </div>
                     </div>
@@ -237,12 +237,12 @@ export default function App() {
                                 Tienda <ChevronDown className="w-4 h-4 ml-1 opacity-70 group-hover:rotate-180 transition-transform duration-300" />
                             </button>
                             {/* Mega menú oculto */}
-                            <div className="absolute top-[80px] left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xl text-gray-800 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex space-x-12 p-8 z-50 border border-gray-100 min-w-max translate-y-4 group-hover:translate-y-0">
+                            <div className="absolute top-[80px] left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-xl text-[#0c345f] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex space-x-12 p-8 z-50 border border-gray-100 min-w-max translate-y-4 group-hover:translate-y-0">
                                 {Object.entries(CATALOG_MENU).map(([category, brands]) => (
                                     <div key={category} className="flex flex-col min-w-[160px]">
                                         <h3
                                             onClick={() => goToStore({ type: 'mainCategory', value: category })}
-                                            className="font-bold text-gray-900 text-base mb-4 pb-2 border-b border-gray-100 cursor-pointer hover:text-blue-600 transition-colors flex items-center justify-between"
+                                            className="font-bold text-[#0c345f] text-base mb-4 pb-2 border-b border-gray-100 cursor-pointer hover:text-blue-600 transition-colors flex items-center justify-between"
                                         >
                                             {category} <ChevronRight className="w-3 h-3 text-gray-300" />
                                         </h3>
@@ -265,7 +265,7 @@ export default function App() {
 
                         <button onClick={goTo360} className={`px-4 py-2 rounded-full transition-all duration-300 ${currentView === '360' ? 'bg-blue-50 text-blue-600 shadow-sm' : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'}`}>upeFR 360°</button>
                         <button onClick={goToAbout} className={`px-4 py-2 rounded-full transition-all duration-300 ${currentView === 'about' ? 'bg-blue-50 text-blue-600 shadow-sm' : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'}`}>Nosotros</button>
-                        <button onClick={goToContact} className={`px-5 py-2 rounded-full font-bold transition-all duration-300 ${currentView === 'contact' ? 'bg-blue-600 text-white shadow-md shadow-blue-600/20' : 'bg-gray-900 text-white hover:bg-blue-600 shadow-md shadow-gray-900/10'}`}>Contacto</button>
+                        <button onClick={goToContact} className={`px-5 py-2 rounded-full font-bold transition-all duration-300 ${currentView === 'contact' ? 'bg-blue-600 text-white shadow-md shadow-blue-600/20' : 'bg-[#082240] text-white hover:bg-blue-600 shadow-md shadow-[#082240]/10'}`}>Contacto</button>
                     </div>
 
                     {/* Iconos (Derecha) */}
@@ -433,7 +433,7 @@ export default function App() {
                 `}</style>
 
                 {/* Hero section */}
-                <div className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-black">
+                <div className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-[#082240]">
                     <AnimatePresence mode="wait">
                         <motion.img
                             key={currentHeroImg}
@@ -499,7 +499,7 @@ export default function App() {
 
                 {/* Marcas Slider */}
                 <div className="bg-white border-b border-gray-100 py-8 overflow-hidden relative z-30 shadow-sm">
-                    <div className="animate-scroll flex items-center gap-16 px-8 text-gray-400 hover:text-gray-800 transition-colors duration-500">
+                    <div className="animate-scroll flex items-center gap-16 px-8 text-gray-400 hover:text-[#0c345f] transition-colors duration-500">
                         {marqueeBrands.map((brand, index) => (
                             <span key={index} className={`text-2xl whitespace-nowrap ${brand.style} mx-8 cursor-pointer grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all`} onClick={() => goToStore({ type: 'brand', value: brand.name })}>
                                 {brand.name}
@@ -520,7 +520,7 @@ export default function App() {
                         {CATEGORIES_DATA.map((cat, index) => (
                             <div key={index} onClick={() => goToStore({ type: 'generic', value: cat.name })} className="relative h-36 md:h-44 rounded-xl overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300">
                                 <img src={cat.img} alt={cat.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0c345f]/90 via-black/30 to-transparent flex items-end justify-center p-4">
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0c345f]/90 via-[#082240]/30 to-transparent flex items-end justify-center p-4">
                                     <h3 className="text-white font-bold text-sm text-center leading-tight group-hover:-translate-y-1 transition-transform">{cat.name}</h3>
                                 </div>
                             </div>
@@ -561,7 +561,7 @@ export default function App() {
                                         </div>
                                     </div>
                                     <div className="p-6 flex flex-col flex-1 bg-white">
-                                        <h3 className="font-bold text-gray-900 text-base mb-2 line-clamp-2 hover:text-blue-600 cursor-pointer transition-colors" onClick={() => goToProduct(product.id)}>
+                                        <h3 className="font-bold text-[#0c345f] text-base mb-2 line-clamp-2 hover:text-blue-600 cursor-pointer transition-colors" onClick={() => goToProduct(product.id)}>
                                             {product.title}
                                         </h3>
                                         <p className="text-gray-500 text-sm mb-4">SKU: {product.sku}</p>
@@ -592,7 +592,7 @@ export default function App() {
                         <div className="md:w-1/2">
                             <div className="text-sm font-bold tracking-widest text-[#b3a48e] uppercase mb-3">Sobre Nosotros</div>
                             <h2 className="text-3xl md:text-5xl font-extrabold text-[#0c345f] mb-6 leading-tight">
-                                Protegiendo a los trabajadores <span className="text-gray-900">más exigentes.</span>
+                                Protegiendo a los trabajadores <span className="text-[#0c345f]">más exigentes.</span>
                             </h2>
                             <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                                 En <strong>upeFR</strong>, somos líderes y especialistas en la distribución de ropa FR (Flame Resistant) y Equipos de Protección Personal (EPP).
@@ -660,7 +660,7 @@ export default function App() {
                             </div>
                         </div>
                         <div className="p-6 flex flex-col flex-1 bg-white">
-                            <h3 className="font-bold text-gray-900 text-base mb-2 line-clamp-2 hover:text-blue-600 cursor-pointer transition-colors" onClick={() => goToProduct(product.id)}>
+                            <h3 className="font-bold text-[#0c345f] text-base mb-2 line-clamp-2 hover:text-blue-600 cursor-pointer transition-colors" onClick={() => goToProduct(product.id)}>
                                 {product.title}
                             </h3>
                             <p className="text-gray-500 text-sm mb-4">SKU: {product.sku}</p>
@@ -860,7 +860,7 @@ export default function App() {
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.2 }}
-                                    className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-[1.1] tracking-tight"
+                                    className="text-3xl md:text-5xl font-extrabold text-[#0c345f] mb-8 leading-[1.1] tracking-tight"
                                 >
                                     {product.title}
                                 </motion.h1>
@@ -877,7 +877,7 @@ export default function App() {
                                     </div>
                                     <div className="bg-white border border-gray-200 rounded-xl px-5 py-3 flex items-center shadow-sm hover:shadow-md transition-shadow">
                                         <span className="text-gray-400 text-xs font-bold uppercase mr-3 tracking-wider">Estilo N°</span>
-                                        <span className="text-xl font-mono font-bold text-gray-800">{product.style}</span>
+                                        <span className="text-xl font-mono font-bold text-[#0c345f]">{product.style}</span>
                                     </div>
                                 </motion.div>
 
@@ -887,7 +887,7 @@ export default function App() {
                                     transition={{ delay: 0.4 }}
                                     className="prose prose-blue text-gray-600 mb-10"
                                 >
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                                    <h3 className="text-xl font-bold text-[#0c345f] mb-4 flex items-center">
                                         <CheckCircle2 className="w-5 h-5 text-blue-600 mr-2" /> Descripción del Equipo
                                     </h3>
                                     <p className="leading-relaxed text-lg">{product.description}</p>
@@ -921,7 +921,7 @@ export default function App() {
                                         </div>
                                         <div className="p-4 flex flex-col flex-1">
                                             <div className="text-[10px] text-gray-400 font-bold uppercase mb-1">{relProduct.brand}</div>
-                                            <h3 className="font-semibold text-gray-800 text-sm mb-2 line-clamp-2 hover:text-[#0c345f] cursor-pointer" onClick={() => goToProduct(relProduct.id)}>
+                                            <h3 className="font-semibold text-[#0c345f] text-sm mb-2 line-clamp-2 hover:text-[#0c345f] cursor-pointer" onClick={() => goToProduct(relProduct.id)}>
                                                 {relProduct.title}
                                             </h3>
                                         </div>
@@ -990,7 +990,7 @@ export default function App() {
                         En <strong className="text-[#0c345f] font-bold">upeFR</strong> comprendemos que en entornos de alto riesgo, la calidad del equipo de protección no es negociable. Nos hemos consolidado como líderes en la distribución de ropa FR (Flame Resistant) y Equipos de Protección Personal (EPP) en México.
                     </p>
                     <p className="text-gray-600 mb-12 text-lg leading-relaxed">
-                        Trabajamos exclusivamente con las marcas globales más respetadas y garantizamos que cada prenda cumpla con rigurosas certificaciones internacionales como <span className="font-semibold text-gray-800">NFPA 2112, NFPA 70E y ASTM</span>. Nuestro compromiso es que cada trabajador regrese a casa seguro.
+                        Trabajamos exclusivamente con las marcas globales más respetadas y garantizamos que cada prenda cumpla con rigurosas certificaciones internacionales como <span className="font-semibold text-[#0c345f]">NFPA 2112, NFPA 70E y ASTM</span>. Nuestro compromiso es que cada trabajador regrese a casa seguro.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6">
                         <div className="bg-blue-50/50 border border-blue-100 p-8 rounded-3xl flex-1 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
@@ -1085,7 +1085,7 @@ export default function App() {
                                 <div className="w-20 h-20 mx-auto bg-white text-blue-600 border border-blue-50 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-[#0c345f] group-hover:text-white group-hover:rotate-6 transition-all duration-300">
                                     {benefit.icon}
                                 </div>
-                                <h4 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[#0c345f] transition-colors">{benefit.title}</h4>
+                                <h4 className="text-xl font-bold text-[#0c345f] mb-4 group-hover:text-[#0c345f] transition-colors">{benefit.title}</h4>
                                 <p className="text-gray-500 leading-relaxed text-sm">{benefit.desc}</p>
                             </motion.div>
                         ))}
@@ -1251,7 +1251,7 @@ export default function App() {
                         Diseñamos <strong className="font-bold text-[#0c345f]">upeFR 360°</strong> como una plataforma iterativa e innovadora que le permita administrar, monitorear y eficientar sus compras de EPP en tiempo real y a la medida de su operación.
                     </motion.p>
 
-                    <h3 className="text-3xl font-bold text-gray-900 mb-12 text-left pl-4 border-l-4 border-blue-600">Beneficios Clave</h3>
+                    <h3 className="text-3xl font-bold text-[#0c345f] mb-12 text-left pl-4 border-l-4 border-blue-600">Beneficios Clave</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
                         {[
                             { icon: <BarChart3 className="w-8 h-8" />, title: "Garantice su control", desc: "El presupuesto se mantiene al margen" },
@@ -1269,7 +1269,7 @@ export default function App() {
                             >
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 rounded-bl-full -z-10 group-hover:bg-blue-100/50 transition-colors"></div>
                                 <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm">{item.icon}</div>
-                                <h4 className="font-bold text-gray-900 text-xl mb-3">{item.title}</h4>
+                                <h4 className="font-bold text-[#0c345f] text-xl mb-3">{item.title}</h4>
                                 <p className="text-gray-500 leading-relaxed font-medium">{item.desc}</p>
                             </motion.div>
                         ))}
@@ -1555,39 +1555,39 @@ export default function App() {
                                 <form onSubmit={handleAddProduct} className="space-y-5">
                                     <div>
                                         <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Título del Producto *</label>
-                                        <input type="text" name="title" required value={formData.title} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm text-gray-800 font-medium" placeholder="Ej. Pantalón Ignífugo..." />
+                                        <input type="text" name="title" required value={formData.title} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm text-[#0c345f] font-medium" placeholder="Ej. Pantalón Ignífugo..." />
                                     </div>
                                     <div className="grid grid-cols-2 gap-4">
                                         <div>
                                             <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">SKU / POS *</label>
-                                            <input type="text" name="sku" required value={formData.sku} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm font-mono text-gray-800" placeholder="100XXX" />
+                                            <input type="text" name="sku" required value={formData.sku} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm font-mono text-[#0c345f]" placeholder="100XXX" />
                                         </div>
                                         <div>
                                             <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Núm. Estilo *</label>
-                                            <input type="text" name="style" required value={formData.style} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm font-mono text-gray-800" placeholder="M5-FR" />
+                                            <input type="text" name="style" required value={formData.style} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm font-mono text-[#0c345f]" placeholder="M5-FR" />
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div>
                                             <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Categoría *</label>
-                                            <select name="mainCategory" value={formData.mainCategory} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 transition-all text-sm text-gray-800 font-medium appearance-none">
+                                            <select name="mainCategory" value={formData.mainCategory} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 transition-all text-sm text-[#0c345f] font-medium appearance-none">
                                                 {Object.keys(CATALOG_MENU).map(cat => <option key={cat} value={cat}>{cat}</option>)}
                                             </select>
                                         </div>
                                         <div>
                                             <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Marca *</label>
-                                            <select name="brand" value={formData.brand} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 transition-all text-sm text-gray-800 font-medium appearance-none">
+                                            <select name="brand" value={formData.brand} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 transition-all text-sm text-[#0c345f] font-medium appearance-none">
                                                 {CATALOG_MENU[formData.mainCategory].map(b => <option key={b} value={b}>{b}</option>)}
                                             </select>
                                         </div>
                                     </div>
                                     <div>
                                         <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">URL de la Imagen</label>
-                                        <input type="url" name="image" value={formData.image} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm text-gray-800" placeholder="https://..." />
+                                        <input type="url" name="image" value={formData.image} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm text-[#0c345f]" placeholder="https://..." />
                                     </div>
                                     <div>
                                         <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Descripción</label>
-                                        <textarea name="description" rows="3" value={formData.description} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm text-gray-800" placeholder="Características detalladas..."></textarea>
+                                        <textarea name="description" rows="3" value={formData.description} onChange={handleInputChange} className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm text-[#0c345f]" placeholder="Características detalladas..."></textarea>
                                     </div>
                                     <button type="submit" className="w-full bg-[#0c345f] hover:bg-[#0a2b50] text-white py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mt-4">
                                         Guardar Producto en Catálogo
@@ -1638,7 +1638,7 @@ export default function App() {
                                                                     <img src={product.image} alt={product.title} className="max-w-full max-h-full object-contain mix-blend-multiply" />
                                                                 </div>
                                                                 <div>
-                                                                    <span className="text-sm font-bold text-gray-900 line-clamp-2 max-w-[250px] group-hover:text-blue-600 transition-colors">{product.title}</span>
+                                                                    <span className="text-sm font-bold text-[#0c345f] line-clamp-2 max-w-[250px] group-hover:text-blue-600 transition-colors">{product.title}</span>
                                                                     <div className="sm:hidden text-xs font-mono font-bold text-[#0c345f] mt-1">{product.sku}</div>
                                                                 </div>
                                                             </div>
