@@ -50,7 +50,7 @@ const App = () => {
             case 'home':
                 return <HomeView products={products} navigate={navigate} />;
             case 'store':
-                return <StoreView products={products} storeFilter={storeFilter} navigate={navigate} />;
+                return <StoreView key={JSON.stringify(storeFilter)} products={products} storeFilter={storeFilter} navigate={navigate} />;
             case 'product':
                 return <ProductView product={selectedProduct} navigate={navigate} />;
             case 'quote':
