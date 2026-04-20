@@ -11,7 +11,7 @@ const services = [
         subtitle: 'Identidad institucional en cada prenda',
         description: 'El bordado aporta una presencia duradera y de alta gama a tus uniformes corporativos. Utilizamos maquinaria computarizada de última generación que garantiza una fidelidad perfecta a tu logotipo y colores institucionales.',
         features: ['Alta resolución y definición de colores', 'Resistente a lavados industriales', 'Compatible con cualquier tela', 'Ideal para logos, nombres y áreas de bordado grandes'],
-        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1000',
+        image: `${import.meta.env.BASE_URL}img_work.jpg`,
         color: '#0057B8',
     },
     {
@@ -21,7 +21,7 @@ const services = [
         subtitle: 'Full color sin límite de detalles',
         description: 'La tecnología DTF permite imprimir diseños de alta complejidad con degradados, sombras y fotografías directamente sobre la prenda. Es la opción ideal cuando los detalles del diseño son fundamentales.',
         features: ['Impresión full color sin límite de colores', 'Acabado suave y flexible al tacto', 'Sin cargos adicionales por número de colores', 'Perfecto para logos multitono y arte detallado'],
-        image: 'https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?auto=format&fit=crop&q=80&w=1000',
+        image: `${import.meta.env.BASE_URL}hero-slider-2.jpg`,
         color: '#0A1628',
     },
     {
@@ -31,7 +31,7 @@ const services = [
         subtitle: 'El estándar de la industria para grandes tirajes',
         description: 'La serigrafía es el método más tradicional y rentable para impresiones de alto volumen. Ofrece una cobertura sólida y excelente durabilidad, siendo la elección preferida para tirajes de 50 piezas o más.',
         features: ['Excelente rentabilidad en grandes volúmenes', 'Tintas de alta pigmentación y durabilidad', 'Acabados especiales: plastisol, agua, brillo', 'Hasta 6 colores por diseño'],
-        image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=1000',
+        image: `${import.meta.env.BASE_URL}hero-slider-3.jpg`,
         color: '#064e3b',
     },
     {
@@ -41,7 +41,7 @@ const services = [
         subtitle: 'La última milla que hace la diferencia',
         description: 'Nos ocupamos de los detalles finales: etiquetado con nombre del empleado, doblado profesional, empaque individual o grupal y presentación en cajas o bolsas con tu identidad. Entregamos listo para distribuir.',
         features: ['Etiquetado individualizado por empleado', 'Doblado y troquelado profesional', 'Empaque en caja o bolsa con branding', 'Distribución directa a sucursales o empleados'],
-        image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=1000',
+        image: `${import.meta.env.BASE_URL}img_logistica.jpg`,
         color: '#374151',
     },
 ];
@@ -50,7 +50,7 @@ const ServicesView = ({ navigate }) => (
     <div className="flex-1 bg-white">
         {/* Hero */}
         <div className="relative bg-[#0A1628] text-white py-28 overflow-hidden">
-            <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1600')] bg-cover bg-center" />
+            <div className="absolute inset-0 opacity-10 bg-cover bg-center" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}conoce_upe.jpg)` }} />
             <div className="absolute inset-0 bg-[#0A1628]/80" />
             <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>

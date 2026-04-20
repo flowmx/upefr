@@ -53,7 +53,7 @@ const AboutView = ({ navigate }) => (
             </motion.div>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="md:w-1/2 w-full">
                 <div className="relative h-[500px] rounded-2xl overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1000"
+                    <img src={`${import.meta.env.BASE_URL}img_work.jpg`}
                         alt="Uniformes" className="absolute inset-0 w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                     <div className="absolute bottom-6 left-6 right-6 border-l-4 border-[#0057B8] pl-4">

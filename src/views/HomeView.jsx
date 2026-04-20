@@ -9,22 +9,22 @@ const CATEGORIAS_FR_HOME = [
     {
         id: 'industrial',
         nombre: 'Ropa FR',
-        imagen: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800',
+        imagen: `${import.meta.env.BASE_URL}hero-slider-1.jpg`,
     },
     {
         id: 'calzado',
         nombre: 'Calzado de Seguridad',
-        imagen: 'https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&q=80&w=800',
+        imagen: `${import.meta.env.BASE_URL}hero-slider-2.jpg`,
     },
     {
         id: 'epp',
         nombre: 'EPP Especializado',
-        imagen: 'https://images.unsplash.com/photo-1631556097045-917e5b8d1e24?auto=format&fit=crop&q=80&w=800',
+        imagen: `${import.meta.env.BASE_URL}hero-slider-3.jpg`,
     },
     {
         id: 'accesorios',
         nombre: 'Accesorios FR',
-        imagen: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800',
+        imagen: `${import.meta.env.BASE_URL}img_work.jpg`,
     },
 ];
 
